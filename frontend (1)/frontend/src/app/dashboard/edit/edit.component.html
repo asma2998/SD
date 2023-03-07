@@ -1,0 +1,147 @@
+<div class="container ">
+    <div class="row">
+        <div class="col-9">
+            <div class="control-section">
+                <div  class="d-flex justify-content-between" style="padding:5px;text-align: right;">
+                    <div class="d-flex ">
+                        <span class="material-symbols-outlined text-light dash" [routerLink]="['/dashboards/board', myDash?._id]">
+                            west
+                        </span>
+                        <div class="ms-3">
+                            <p class="text-light" >{{myDash?.title}} </p>
+                        </div>
+                    </div>
+        
+                    <div class="d-flex">
+                   
+                        <span class="btn btn-dark me-2"(click)="save()" >
+                            <span class="material-symbols-outlined text-light">
+                                save
+                            </span>
+                        </span>
+
+                        <span class="btn btn-dark me-2">
+                            <span class="material-symbols-outlined text-light">
+                                settings
+                            </span>
+                        </span>
+        
+                        <span class="btn btn-dark me-2">
+                            <span class="material-symbols-outlined text-light">
+                                zoom_out
+                            </span>
+                        </span>
+                        <span class="btn btn-dark me-2">
+                            <span class="material-symbols-outlined text-light">
+                                cached
+                            </span>
+                        </span>
+                        <span class="btn btn-dark me-2">
+                            <span class="material-symbols-outlined text-light">
+                                print
+                            </span>
+                        </span>
+        
+        
+                    </div>
+                  
+                </div>
+                <ejs-dashboardlayout class="mt-3" id='default_dashboard' columns="5" #default_dashboard [cellSpacing]='cellSpacing' [allowDragging]="false"  [allowResizing]='false'>
+                   
+               
+                </ejs-dashboardlayout>
+            </div>
+        </div>
+
+        <div class="col-3">
+
+            <div class="dropdown">
+                <button class="btn btn-dark m-2 w-100  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    select panel data type
+                </button>
+                <ul class="dropdown-menu w-100 bg-dark">
+                  <li>
+                    <div (click)="changeType('time')" class="card m-1 bg-black p-1">
+                        <div class="d-flex">
+                            <img style="width: 50px;" src="assets/charts/icn-timeseries-panel.svg" alt="">
+                            <div class="chart-option-text">
+                                <h6>Time series</h6>
+                                <p>Time based line, area and bar charts</p>
+                            </div>
+                        </div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div (click)="changeType('table')" class="card m-1 bg-black p-1">
+                        <div class="d-flex">
+                            <img style="width: 50px;" src="assets/charts/icn-table-panel.svg" alt="">
+                            <div class="chart-option-text">
+                                <h6>Table</h6>
+                                <p>Supports many column styles</p>
+                            </div>
+                        </div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div (click)="changeType('text')" class="card m-1 bg-black p-1">
+                        <div class="d-flex">
+                            <img style="width: 50px;" src="assets/charts/icn-text-panel.svg" alt="">
+                            <div class="chart-option-text">
+                                <h6>Text</h6>
+                                <p>Supports markdown and html content</p>
+                            </div>
+                        </div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div (click)="changeType('stat')" class="card m-1 bg-black p-1">
+                        <div class="d-flex">
+                            <img style="width: 50px;" src="assets/charts/icn-singlestat-panel.svg" alt="">
+                            <div class="chart-option-text">
+                                <h6>Stat</h6>
+                                <p>Big stat values & sparklines</p>
+                            </div>
+                        </div>
+                    </div>
+                  </li>
+
+                
+                 
+                </ul>
+            </div>
+
+            <div class="tools card bg-dark ms-2 w-100">
+
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Panel options
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body bg-dark">
+                
+                            <label for="" class="text-light">Tiltle:</label><br>
+                            <input (input)="changeTitle($event)" [value]="panel?.title" type="text" class="form-control bg-black">
+
+                            <label for="" class="text-light">Description:</label><br>
+                            <textarea (input)="changeDescription($event)" [value]="panel?.description" class="form-control bg-black" cols="30" rows="3"></textarea>
+
+                            <label for="" class="text-light">Transparent background</label><br>
+                            <input class="form-check-input" type="checkbox" name="" id="">
+                        </div>
+                      </div>
+                    </div>
+                 
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="container mt-5">
+
+    <div class="d-flex">
+        <span class="material-symbols-outlined text-light mt-1 dash">
+            grid_view
+        </span>
+        <div class="ms-3">
+            <h1 class="text-light" >Dashboards</h1>
+            <p class="text-light">Create and manage dashboards to visualize your data</p>
+        </div>
+    </div>
+
+
+
+    <div class="card mt-4 bg-dark">
+
+        <div class="row m-4 new">
+            <div class="col-10">
+                <input [(ngModel)]="dashboard.title" type="text" class="form-control" placeholder="dashboard name">
+            </div>
+            <div class="col-2">
+                <button class="btn btn-primary form-control"  (click)="create()" >Create</button>
+            </div>
+        </div>
+
+
+        <div *ngFor="let item of dashboards" class="mt-2 m-4 px-5 py-2 card bg" >
+            <h3 class="text-light" [routerLink]="['/dashboards/board', item._id]" > {{ item.title }} </h3>
+            <p class="d-flex ms-3 text-light">
+                <span class="material-symbols-outlined me-2">
+                    folder
+                </span>
+                General
+            </p>
+        </div>
+
+       
+
+    </div>
+
+</div>

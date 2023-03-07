@@ -1,0 +1,16 @@
+.dash{
+    font-size: 70px;
+}
+
+input{
+    background-color: transparent;
+}
+
+input::placeholder{
+    color: rgb(194, 194, 194);
+}
+
+.bg{
+    background-color: rgb(61, 60, 60);
+    cursor: pointer;
+}

@@ -1,0 +1,64 @@
+.dropdown-item{
+    font-size: 10px !important;
+    margin-top: -12px;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-item>span{
+    font-size: 12px !important;
+    margin-right: 8px !important;
+}
+
+
+.chart-option-text>h6{
+    font-size: 16px;
+    margin-left: 8px;
+
+}
+
+.chart-option-text>p{
+    font-size: 12px;
+    margin-left: 8px;
+}
+
+
+.card{
+    background-color: rgb(51, 51, 51) !important;
+}
+
+.card:hover{
+    background-color: rgb(60, 60, 60) !important;
+}
+
+.accordion-item{
+    border: none !important;
+    margin: 12px;
+    background-color: transparent !important;
+}
+
+.accordion-button{
+    background-color: transparent !important;
+    color: white !important;
+    border: none !important;
+}
+
+.accordion-body{
+    border: none !important;
+}
+
+.form-control{
+    border: 1px solid rgb(139, 139, 139);
+    margin-top: 4px;
+    color: white;
+}
+
+
+
+.card-body1{
+    background-color: #343232d7 !important;
+}
+
+.card-body1>h3{
+    color: #a5a5a5 !important;
+}

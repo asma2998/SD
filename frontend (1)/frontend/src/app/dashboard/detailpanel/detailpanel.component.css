@@ -1,0 +1,19 @@
+.dropdown-item{
+    font-size: 10px !important;
+    margin-top: -12px;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-item>span{
+    font-size: 12px !important;
+    margin-right: 8px !important;
+}
+
+
+.card-body1{
+    background-color: #343232d7 !important;
+}
+.card-body1>h3{
+    color: #a5a5a5 !important;
+}

@@ -1,0 +1,33 @@
+<div class="control-section" id="sidebarmenu">
+  <!-- header-section  declaration -->
+
+  <!-- main content declaration -->
+  <div class="main-menu-content" id="maintext">
+      <div class="menu-content">
+         <router-outlet></router-outlet>
+         
+      </div>
+  </div>
+  <!-- end of main content declaration sidebar element declaration -->
+  <ejs-sidebar  id="menuSidebar" class="sidebar-menu bg-dark" #sidebarMenuInstance [enableDock]='enableDock'
+      [dockSize]="dockSize" [width]="width" [target]="target" [isOpen]="true" type="Auto">
+      <ejs-toolbar id="menuToolbar" class="bg-dark" (clicked)="toolbarCliked($event)">
+        <e-items class="bg-dark">
+            <e-item prefixIcon="fa-solid fa-bars bg-dark text-light" tooltipText="Menu"></e-item>
+            
+
+          
+        </e-items>
+    </ejs-toolbar>
+      <div class="main-menu bg-dark">
+          <div>
+            <div style="display: flex;align-items: center;">
+                <img src="assets/logo.svg" alt="Logo" class="menu-logo">
+                <a class="link">Home page</a>
+            </div>
+            <ejs-menu id="dockMenu" [items]="menuItems" orientation='Vertical' cssClass='dock-menu bg-dark text-light'>
+            </ejs-menu>
+          </div>
+      </div>
+  </ejs-sidebar>
+</div>
